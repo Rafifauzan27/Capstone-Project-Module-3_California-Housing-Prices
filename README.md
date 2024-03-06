@@ -46,3 +46,19 @@ Data ini berisi informasi yang berkaitan dengan detail harga dan kondisi rumah-r
 | ocean_proximity | object  | Jarak Perumahan dari Laut |
 | median_house_value | float64 | Median Harga Rumah dengan satuan US dollar |
 
+## Kesimpulan
+1. Diantara 12 model regresi yang diujikan, **XGBoost** adalah algoritma pemodelan yang paling baik dalam memprediksi harga jual properti.
+2. Mengalami sedikit peningkatan setelah dilakukan tuning pada 2 model terbaik, MAPE untuk XGBRegressor adalah sekitar 17,7% dan untuk RandomForest Regressor adalah sekitar 18,5%. Setelah tuning, MAPE untuk XGBRegressor meningkat menjadi sekitar 16,9%, sedangkan untuk RandomForest Regressor meningkat menjadi sekitar 18,4%.
+3. Perbandingan antara harga yang diprediksi (Predicted Price) dan harga aktual (Actual Price) menunjukkan bahwa prediksi harga pada data uji tersebut kurang akurat. Untuk mengatasi masalah tersebut, perlu dilakukan analisis lebih lanjut dan pengembangan algoritma prediksi yang lebih baik.
+4. Feature Importance yang paling mempengaruhi hasil prediksi adalah jarak lokasi perumahan dari laut pada kategori INLAND dan termasuk median income sebagai pendapatan penduduk dalam menentukan nilai harga jual properti.
+
+## Rekomendasi
+1. Rekomendasi Model: Mengingat XGBoost adalah algoritma pemodelan terbaik dalam memprediksi harga jual properti, direkomendasikan untuk menggunakan model XGBoost untuk prediksi harga properti di masa depan.
+
+2. Tuning Model: Tindakan tuning pada model XGBoost menghasilkan peningkatan kinerja yang signifikan, menurunkan MAPE dari sekitar 17,7% menjadi sekitar 16,9%. Ini menunjukkan pentingnya proses tuning untuk meningkatkan kinerja model. Meskipun demikian, masih ada ruang untuk meningkatkan kinerja model RandomForest Regressor dengan melakukan tuning lebih lanjut atau menggabungkan pendekatan ensemble.
+
+3. Analisis Lebih Lanjut: Mengingat perbandingan antara harga yang diprediksi dan harga aktual menunjukkan ketidakakuratan prediksi, diperlukan analisis lebih lanjut untuk memahami penyebabnya. Mungkin perlu untuk memperbaiki pemrosesan data, menambah atau mengubah fitur-fitur yang digunakan, atau bahkan mencoba pendekatan model yang berbeda.
+
+4. Feature Importance: Dengan mengetahui bahwa jarak lokasi perumahan dari laut (khususnya kategori INLAND) dan median income sangat mempengaruhi hasil prediksi, disarankan untuk lebih fokus pada fitur-fitur ini dalam pengembangan model dan dalam mengumpulkan data tambahan jika memungkinkan. Selain itu, mungkin juga berguna untuk melakukan analisis lebih mendalam terhadap fitur-fitur lainnya yang memiliki pengaruh signifikan terhadap harga properti.
+
+Dengan mengikuti rekomendasi ini, diharapkan dapat meningkatkan kinerja model dan akurasi prediksi harga properti di masa depan.
